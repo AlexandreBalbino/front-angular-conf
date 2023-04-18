@@ -7,7 +7,7 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EscolaridadeHelper } from '../enums/escolaridade';
 import { Usuario } from '../models/usuario';
-import { SuccessMessageComponent } from '../success-message/success-message.component';
+import { SuccessMessageComponent } from '../snack-bar/success-message/success-message.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -37,7 +37,8 @@ export class NovoUsuarioComponent {
     escolaridade: ['', [Validators.required]],
   });
 
-  constructor(private formBuilder: FormBuilder, private usuarioService: UsuariosService, private snackBar: MatSnackBar, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private usuarioService: UsuariosService,
+     private snackBar: MatSnackBar, private router: Router) {
   }
 
   obtemEscolaridade = (escolaridade: number) => new EscolaridadeHelper().obtemDescricaoEnum(escolaridade);

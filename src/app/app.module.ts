@@ -17,7 +17,8 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { SuccessMessageComponent } from './success-message/success-message.component';
+import { SuccessMessageComponent } from './snack-bar/success-message/success-message.component';
+import { DeletedMessageComponent } from './snack-bar/deleted-message/deleted-message.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
     ListaUsuariosComponent,
     NovoUsuarioComponent,
     SuccessMessageComponent,
+    DeletedMessageComponent,
     ],
   imports: [
     BrowserModule,
