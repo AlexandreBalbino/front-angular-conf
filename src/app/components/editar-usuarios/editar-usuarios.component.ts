@@ -53,8 +53,6 @@ export class EditarUsuariosComponent implements OnInit {
         const data = new Date(usuario.dataNascimento);
         const dataMoment = moment(data);
 
-        console.log(dataMoment)
-
         this.profileForm.patchValue(
           {
             'nome': usuario.nome,
