@@ -1,0 +1,46 @@
+<div class="column">
+    <div class="centralizado">
+        <h1>
+            Editar usuário
+        </h1>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="criarUsuario()" class="example-form">
+        <mat-form-field class="full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. Junior" formControlName="nome">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput placeholder="Ex. Almeida" formControlName="sobrenome">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>email</mat-label>
+            <input matInput placeholder="Ex. email@gmail.com.br" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Data de nascimento</mat-label>
+            <div class="em-linha">
+                <input matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Ex.MM/DD/YYYY" formControlName="dataNascimento">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Escolariade</mat-label>
+            <mat-select formControlName="escolaridade">
+                <mat-option *ngFor="let escolaridade of escolaridades" [value]="escolaridade">
+                    {{obtemEscolaridade(escolaridade)}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="centralizado">
+            <button mat-raised-button type="submit" [disabled]="!profileForm.valid" >Editar Usuário</button>
+        </div>
+    </form>
+
+</div>

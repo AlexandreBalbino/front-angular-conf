@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SuccessMessageComponent } from './snack-bar/success-message/success-message.component';
 import { DeletedMessageComponent } from './snack-bar/deleted-message/deleted-message.component';
+import { EditarUsuariosComponent } from './components/editar-usuarios/editar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DeletedMessageComponent } from './snack-bar/deleted-message/deleted-mes
     NovoUsuarioComponent,
     SuccessMessageComponent,
     DeletedMessageComponent,
+    EditarUsuariosComponent,
     ],
   imports: [
     BrowserModule,

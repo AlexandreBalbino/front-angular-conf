@@ -1,10 +1,11 @@
-import { Router } from '@angular/router';
-import { EscolaridadeHelper } from '../../enums/escolaridade';
-import { Usuario } from '../../models/usuario';
-import { UsuariosService } from '../../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { EscolaridadeHelper } from '../../enums/escolaridade';
+import { UsuariosService } from '../../services/usuarios.service';
 import { DeletedMessageComponent } from '../../snack-bar/deleted-message/deleted-message.component';
+import { Usuario } from './../../models/usuario';
+import { DadosModelService } from '../service/dados-model.service';
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -17,7 +18,7 @@ export class ListaUsuariosComponent implements OnInit {
   displayedColumns: string[] = ['nome', 'sobrenome', 'email', 'escolaridade', 'actions'];
 
   constructor(private usuarioService: UsuariosService, private router: Router,
-    private snackBar: MatSnackBar) { }
+    private snackBar: MatSnackBar, private dadosModelService: DadosModelService) { }
 
   ngOnInit(): void {
     this.obterUsuarios();
@@ -42,6 +43,11 @@ export class ListaUsuariosComponent implements OnInit {
         duration: 6000,
       })
     });
+  }
+
+  editarUsuario(usuario: Usuario) {
+    this.dadosModelService.setUsuario(usuario);
+    this.router.navigate(['/editar-usuarios']);
   }
 
 }

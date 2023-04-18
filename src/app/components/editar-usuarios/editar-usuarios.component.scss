@@ -1,0 +1,17 @@
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+}
+
+.full-width {
+    width: 100%;
+  }
+
+  .em-linha {
+    display: flex;
+  }

@@ -16,5 +16,8 @@ export class UsuariosService {
   insereUsuario = (usuario: Usuario) =>
     this.httpCliente.post<void>(`${environment.apiUrl}/usuarios`, usuario);
 
+  editarUsuario = (usuario: Usuario) =>
+    this.httpCliente.put<void>(`${environment.apiUrl}/usuarios`, usuario);
+
   removerUsuario = (id: string) => this.httpCliente.delete<string>(`${environment.apiUrl}/usuarios/${id}`)
 }
