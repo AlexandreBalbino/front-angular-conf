@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+}
+
+.fim-pagina {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
