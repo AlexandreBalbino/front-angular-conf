@@ -1,10 +1,10 @@
 import { Router } from '@angular/router';
-import { EscolaridadeHelper } from '../enums/escolaridade';
-import { Usuario } from '../models/usuario';
-import { UsuariosService } from './../services/usuarios.service';
+import { EscolaridadeHelper } from '../../enums/escolaridade';
+import { Usuario } from '../../models/usuario';
+import { UsuariosService } from '../../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DeletedMessageComponent } from '../snack-bar/deleted-message/deleted-message.component';
+import { DeletedMessageComponent } from '../../snack-bar/deleted-message/deleted-message.component';
 
 @Component({
   selector: 'app-lista-usuarios',

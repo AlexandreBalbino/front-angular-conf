@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
-import { UsuariosService } from './../services/usuarios.service';
-
+import { UsuariosService } from '../../services/usuarios.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { EscolaridadeHelper } from '../enums/escolaridade';
-import { Usuario } from '../models/usuario';
-import { SuccessMessageComponent } from '../snack-bar/success-message/success-message.component';
 import { Router } from '@angular/router';
+import { EscolaridadeHelper } from '../../enums/escolaridade';
+import { Usuario } from '../../models/usuario';
+import { SuccessMessageComponent } from '../../snack-bar/success-message/success-message.component';
 
 @Component({
   selector: 'app-novo-usuario',
