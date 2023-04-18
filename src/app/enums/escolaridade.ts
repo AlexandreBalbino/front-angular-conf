@@ -6,7 +6,7 @@ export enum Escolaridade {
     Superior
 }
 
-export class EscolaridadeDescricao {
+export class EscolaridadeHelper {
     private descricoes = new Map<number, string>([
         [Escolaridade.Infantil, "Infantil"],
         [Escolaridade.Fundamental, "Fundamental"],
@@ -17,5 +17,10 @@ export class EscolaridadeDescricao {
     obtemDescricaoEnum = (escolaridade: Escolaridade) => {
         return this.descricoes.get(escolaridade);
     }
+
+    obtemEnum = () => [Escolaridade.Infantil,
+    Escolaridade.Fundamental,
+    Escolaridade.Medio,
+    Escolaridade.Superior];
 }
 

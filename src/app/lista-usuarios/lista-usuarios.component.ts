@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { EscolaridadeDescricao } from '../enums/escolaridade';
+import { EscolaridadeHelper } from '../enums/escolaridade';
 import { Usuario } from '../models/usuario';
 import { UsuariosService } from './../services/usuarios.service';
 import { Component, OnInit } from '@angular/core';
@@ -22,7 +22,7 @@ export class ListaUsuariosComponent implements OnInit {
     })
   }
 
-  obtemEscolaridade = (escolaridade: number) => new EscolaridadeDescricao().obtemDescricaoEnum(escolaridade);
+  obtemEscolaridade = (escolaridade: number) => new EscolaridadeHelper().obtemDescricaoEnum(escolaridade);
 
   redirecionarNovoUsuario() {
     this.router.navigate(['/novo-usuario']);
