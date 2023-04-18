@@ -16,12 +16,15 @@ import { AppComponent } from './app.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SuccessMessageComponent } from './success-message/success-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaUsuariosComponent,
     NovoUsuarioComponent,
+    SuccessMessageComponent,
     ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule, 
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

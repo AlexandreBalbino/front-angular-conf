@@ -13,4 +13,8 @@ export class UsuariosService {
   obtemUsuarios() {
     return this.httpCliente.get<Usuario[]>(`${environment.apiUrl}/usuarios`);
   }
+
+  insereUsuario(usuario: Usuario) {
+    return this.httpCliente.post(`${environment.apiUrl}/usuarios`, usuario);
+  }
 }

@@ -14,7 +14,7 @@ export class ListaUsuariosComponent implements OnInit {
   usuarios: Usuario[] = []
   displayedColumns: string[] = ['nome', 'sobrenome', 'email', 'escolaridade', 'actions'];
 
-  constructor(private usuarioService: UsuariosService, private router: Router,) { }
+  constructor(private usuarioService: UsuariosService, private router: Router) { }
 
   ngOnInit(): void {
     this.usuarioService.obtemUsuarios().subscribe(usuariosObtidos => {
